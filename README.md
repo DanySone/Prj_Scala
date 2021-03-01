@@ -54,12 +54,12 @@ describe in the paragraph «Alert»
 4) Peaceland has likely forgotten some technical information in the report sent by the
 drone. In the future this information could help Peaceland make its peacewatchers
 much more efficient. Which information?
-##Project
+## Project
 Peaceland understands this is beyond their team limits, it can not put in place a programm to
 deal with the drone’s data. Peaceland asks you for advice to design an architecture allowing
 them to create a product they could sell to different police forces.
 It's up to you to report and recommend the right architecture.
 Based on the preliminary question your solution is very likely to include :
-- at least one distributed storage
-- at least one distributed stream
-- at least two stream consumer
+  - at least one distributed storage
+  - at least one distributed stream
+  - at least two stream consumer
