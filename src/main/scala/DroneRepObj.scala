@@ -21,7 +21,7 @@ object DroneRepObj {
   def randrep() = {
     val r = scala.util.Random
     val n = scala.util.Random.nextInt(10)
-    DroneRep(r.nextInt(10000), r.nextFloat(), r.nextFloat(), HashMap(r.alphanumeric.take(6).mkString -> r.nextInt(100)), List.fill(n)(r.alphanumeric.take(8).mkString))
+    DroneRep(r.nextInt(10000), r.nextFloat(), r.nextFloat(), HashMap(r.alphanumeric.take(6).mkString -> r.nextInt(100)), List.fill(n)(r.alphanumeric.take(5).mkString))
   }
 
   def dronedisp(d: DroneRep) = {
