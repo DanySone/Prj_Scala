@@ -10,8 +10,6 @@
       <excludeFolder url="file://$MODULE_DIR$/../../target" />
     </content>
     <orderEntry type="inheritedJdk" />
-    <orderEntry type="library" exported="" name="sbt: org.slf4j:slf4j-api:2.0.0-alpha1:jar" level="project" />
-    <orderEntry type="library" exported="" name="sbt: org.slf4j:slf4j-simple:2.0.0-alpha1:jar" level="project" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="sbt: com.fasterxml.jackson.core:jackson-annotations:2.10.5:jar" level="project" />
     <orderEntry type="library" name="sbt: com.fasterxml.jackson.core:jackson-core:2.10.5:jar" level="project" />
@@ -21,6 +19,7 @@
     <orderEntry type="library" name="sbt: com.fasterxml.jackson.module:jackson-module-paranamer:2.10.5:jar" level="project" />
     <orderEntry type="library" name="sbt: com.fasterxml.jackson.module:jackson-module-scala_2.13:2.10.5:jar" level="project" />
     <orderEntry type="library" name="sbt: com.github.luben:zstd-jni:1.4.5-6:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.github.pjfanning:scala-faker_2.13:0.5.2:jar" level="project" />
     <orderEntry type="library" name="sbt: com.thoughtworks.paranamer:paranamer:2.8:jar" level="project" />
     <orderEntry type="library" name="sbt: com.typesafe.scala-logging:scala-logging_2.13:3.9.2:jar" level="project" />
     <orderEntry type="library" name="sbt: com.yammer.metrics:metrics-core:2.2.0:jar" level="project" />
@@ -45,6 +44,9 @@
     <orderEntry type="library" name="sbt: org.scala-lang.modules:scala-java8-compat_2.13:0.9.1:jar" level="project" />
     <orderEntry type="library" name="sbt: org.scala-lang:scala-library:2.13.4:jar" level="project" />
     <orderEntry type="library" name="sbt: org.scala-lang:scala-reflect:2.13.4:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.slf4j:slf4j-api:2.0.0-alpha1:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.slf4j:slf4j-simple:2.0.0-alpha1:jar" level="project" />
     <orderEntry type="library" name="sbt: org.xerial.snappy:snappy-java:1.1.7.7:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.yaml:snakeyaml:1.27:jar" level="project" />
   </component>
 </module>

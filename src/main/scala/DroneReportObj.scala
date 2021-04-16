@@ -4,10 +4,11 @@ import java.time.format.DateTimeFormatter
 import scala.collection.immutable.HashMap
 import java.util.{Calendar, Date}
 import scala.util.Random
+import faker._
 
-object DroneRepObj {
+object DroneReportObj {
 
-  case class DroneRep(_id : Int, _latitude : Float, _longitude : Float, _surrounding : HashMap[String, Int], _words : List[String]) {
+  case class DroneReport(_id : Int, _latitude : String, _longitude : String, _surrounding : Map[String, Int], _words : List[String]) {
     val id = _id
     val latitude = _latitude
     val longitude = _longitude
@@ -20,11 +21,17 @@ object DroneRepObj {
 
   def randrep() = {
     val r = scala.util.Random
-    val n = scala.util.Random.nextInt(10)
-    DroneRep(r.nextInt(10000), r.nextFloat(), r.nextFloat(), HashMap(r.alphanumeric.take(6).mkString -> r.nextInt(100)), List.fill(n)(r.alphanumeric.take(5).mkString))
+    val n = scala.util.Random.nextInt(20)
+    val m = scala.util.Random.nextInt(10)
+    DroneReport(r.nextInt(100000),
+      Address.latitude,
+      Address.longitude,
+      List.fill(m)((Name.name, r.nextInt(100))).toMap,
+      Lorem.words(n)
+    )
   }
 
-  def dronedisp(d: DroneRep) = {
+  def dronedisp(d: DroneReport) = {
     val rep = "id = " + d._id.toString + " latitude = " + d._latitude + " longitude = " + d._longitude + " surrounding = " + d._surrounding.toString + " words = " + d._words.toString
     println(rep)
   }

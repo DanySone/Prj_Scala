@@ -11,3 +11,8 @@ libraryDependencies += "org.apache.kafka" %% "kafka" % "2.7.0"
 libraryDependencies += "org.slf4j" % "slf4j-api" % "2.0.0-alpha1"
 // https://mvnrepository.com/artifact/org.slf4j/slf4j-simple
 libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.0-alpha1"
+
+// Source : https://github.com/pjfanning/scala-faker
+// A library for generating fake data.
+libraryDependencies += "com.github.pjfanning" % "scala-faker_2.13" % "0.5.2"
+

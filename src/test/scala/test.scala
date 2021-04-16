@@ -1,5 +1,5 @@
 
 object test extends App {
-  val d1 = DroneRepObj.randrep()
-  DroneRepObj.dronedisp(d1)
+  val d1 = DroneReportObj.randrep()
+  DroneReportObj.dronedisp(d1)
 }
