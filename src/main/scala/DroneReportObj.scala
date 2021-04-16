@@ -8,14 +8,13 @@ import faker._
 
 object DroneReportObj {
 
-  case class DroneReport(_id : Int, _latitude : String, _longitude : String, _surrounding : Map[String, Int], _words : List[String]) {
+  case class DroneReport(_id : Int, _latitude : String, _longitude : String, _surrounding : Map[String, Int], _words : List[String], _day : String ) {
     val id = _id
     val latitude = _latitude
     val longitude = _longitude
     val surrounding = _surrounding
     val words = _words
-    val format = new SimpleDateFormat("H-d-M-y")
-    val date = format.format(Calendar.getInstance().getTime())
+    val day = _day
   }
 
 
@@ -23,11 +22,14 @@ object DroneReportObj {
     val r = scala.util.Random
     val n = scala.util.Random.nextInt(20)
     val m = scala.util.Random.nextInt(10)
+    val list_day = List("Monday", "Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday")
+    val rday = r.between(0,7)
     DroneReport(r.nextInt(100000),
       Address.latitude,
       Address.longitude,
       List.fill(m)((Name.name, r.nextInt(100))).toMap,
-      Lorem.words(n)
+      Lorem.words(n),
+      list_day(rday)
     )
   }
 
