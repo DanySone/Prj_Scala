@@ -20,14 +20,14 @@
       val rec = records.asScala.head.value()
       println(rec)
     }
+
     def records_val() {
       val records = kafkaConsumer.poll(5000)
-
       records_print(records)
       Thread.sleep(5000L)
 
       records_val()
     }
-    records_val()
 
+    records_val()
   }
