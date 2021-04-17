@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id="prj_scala [file:/home/dany/Documents/GitHub/Prj_Scala/]" external.linked.project.path="$MODULE_DIR$/../.." external.root.project.path="$MODULE_DIR$/../.." external.system.id="SBT" type="JAVA_MODULE" version="4">
+<module external.linked.project.id="prj_scala [file:/home/tartas/IdeaProjects/Prj_Scala/]" external.linked.project.path="$MODULE_DIR$/../.." external.root.project.path="$MODULE_DIR$/../.." external.system.id="SBT" type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/../../target/scala-2.13/classes" />
     <output-test url="file://$MODULE_DIR$/../../target/scala-2.13/test-classes" />
@@ -10,6 +10,8 @@
       <excludeFolder url="file://$MODULE_DIR$/../../target" />
     </content>
     <orderEntry type="inheritedJdk" />
+    <orderEntry type="library" name="sbt: org.slf4j:slf4j-simple:2.0.0-alpha1:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.slf4j:slf4j-api:2.0.0-alpha1:jar" level="project" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="sbt: com.fasterxml.jackson.core:jackson-annotations:2.10.5:jar" level="project" />
     <orderEntry type="library" name="sbt: com.fasterxml.jackson.core:jackson-core:2.10.5:jar" level="project" />
@@ -19,11 +21,9 @@
     <orderEntry type="library" name="sbt: com.fasterxml.jackson.module:jackson-module-paranamer:2.10.5:jar" level="project" />
     <orderEntry type="library" name="sbt: com.fasterxml.jackson.module:jackson-module-scala_2.13:2.10.5:jar" level="project" />
     <orderEntry type="library" name="sbt: com.github.luben:zstd-jni:1.4.5-6:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.github.pjfanning:scala-faker_2.13:0.5.2:jar" level="project" />
+    <orderEntry type="library" exported="" name="sbt: com.github.pjfanning:scala-faker_2.13:0.5.2:jar" level="project" />
     <orderEntry type="library" name="sbt: com.thoughtworks.paranamer:paranamer:2.8:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.typesafe.akka:akka-actor_2.13:2.6.14:jar" level="project" />
     <orderEntry type="library" name="sbt: com.typesafe.scala-logging:scala-logging_2.13:3.9.2:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.typesafe:config:1.4.0:jar" level="project" />
     <orderEntry type="library" name="sbt: com.yammer.metrics:metrics-core:2.2.0:jar" level="project" />
     <orderEntry type="library" name="sbt: commons-cli:commons-cli:1.4:jar" level="project" />
     <orderEntry type="library" name="sbt: io.netty:netty-buffer:4.1.48.Final:jar" level="project" />
@@ -46,9 +46,6 @@
     <orderEntry type="library" name="sbt: org.scala-lang.modules:scala-java8-compat_2.13:0.9.1:jar" level="project" />
     <orderEntry type="library" name="sbt: org.scala-lang:scala-library:2.13.4:jar" level="project" />
     <orderEntry type="library" name="sbt: org.scala-lang:scala-reflect:2.13.4:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.scalaz:scalaz-core_2.13:7.2.30:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.slf4j:slf4j-api:2.0.0-alpha1:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.slf4j:slf4j-simple:2.0.0-alpha1:jar" level="project" />
     <orderEntry type="library" name="sbt: org.xerial.snappy:snappy-java:1.1.7.7:jar" level="project" />
     <orderEntry type="library" name="sbt: org.yaml:snakeyaml:1.27:jar" level="project" />
   </component>
