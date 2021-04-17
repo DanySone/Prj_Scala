@@ -1,12 +1,9 @@
 import org.apache.kafka.clients.producer.{KafkaProducer, ProducerRecord}
 
 import java.util.Properties
-import scala.concurrent.duration.{FiniteDuration, SECONDS}
-import List._
-import org.apache.kafka.clients.producer.ProducerConfig
 
 
-object KafkaProducerApp extends App {
+object KafkaProducerAlertRepApp extends App {
 
   // Properties for Kafka producer
   val props:Properties = new Properties()
@@ -24,11 +21,15 @@ object KafkaProducerApp extends App {
   val producer = new KafkaProducer[String, String](props)
 
   // Name of the topic that will be used to put messages
-  val topic = "text_topic"
-
+  val topic = "alert_report_topic"
+  val partition = "report"
   def report_generator(p: KafkaProducer[String, String]) {
     val d1 = DroneReportObj.randrep()
-    val report = new ProducerRecord[String, String](topic,
+
+    val alert = d1._surrounding.filter((t) => t._2 < 30)
+
+    val report = new ProducerRecord[String, String](topic ,
+      partition ,
       d1._id.toString + ","
         + d1._latitude + ","
         + d1._longitude + ","
@@ -43,13 +44,7 @@ object KafkaProducerApp extends App {
 
 
   try {
-    val d1 = DroneReportObj.randrep()
-    val alert = d1._surrounding.filter((t) => t._2 < 50)
 
-    if (alert.size == 1)
-      println("Alert ! the citizen " + alert + " is unhappy, he must go to the peaceland prison.")
-    else (alert.size > 1)
-    println("Alert ! the citizens " + alert + " are unhappy, they must go to the peaceland prison.")
     report_generator(producer)
   }
   catch {
