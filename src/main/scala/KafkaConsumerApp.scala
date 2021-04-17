@@ -4,8 +4,9 @@
 
  import java.util
  import scala.collection.JavaConverters._
- import java.util.Properties
+ import java.util.{Calendar, Properties}
  import java.io._
+ import java.text.SimpleDateFormat
 
  object KafkaConsumerApp extends App {
     val props = new Properties()
@@ -16,11 +17,11 @@
 
     val kafkaConsumer = new KafkaConsumer[String, String](props)
     kafkaConsumer.subscribe(util.Collections.singletonList("text_topic"))
-
+    val format = new SimpleDateFormat("d_M_y")
     def records_print(records: ConsumerRecords[String, String]): Unit = {
       val rec = records.asScala.head.value()
       println(rec)
-      val pw = new PrintWriter(new FileOutputStream(new File("rapport.csv"),true))
+      val pw = new PrintWriter(new FileOutputStream(new File("rapport_"+format.format(Calendar.getInstance().getTime()).toString+".csv"),true))
       pw.write(rec+"\n")
       pw.close
     }
