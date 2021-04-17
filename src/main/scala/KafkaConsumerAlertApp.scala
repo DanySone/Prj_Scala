@@ -1,4 +1,5 @@
  import org.apache.kafka.clients.consumer.{ConsumerRecords, KafkaConsumer}
+ import org.apache.kafka.common.TopicPartition
 
  import java.util
  import java.util.Properties
@@ -9,19 +10,23 @@
     props.put("bootstrap.servers", "localhost:9092")
     props.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer")
     props.put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer")
-    props.put("group.id", "alert")
+    props.put("group.id", "something")
 
     val kafkaConsumer = new KafkaConsumer[String, String](props)
-    kafkaConsumer.subscribe(util.Collections.singletonList("alert_report_topic"))
+    kafkaConsumer.assign(util.Collections.singleton(new TopicPartition("alert_report_topic", 1)))
 
-    def records_print(records: ConsumerRecords[String, String]): Unit = {
-      val rec = records.asScala.head.value()
-      println(rec)
+   def records_print() {
+      try {
+        val records = kafkaConsumer.poll(5000)
+        val rec = records.asScala.head.value()
+        println(rec)
+      } catch {
+        case e:Exception => Thread.sleep(5000)
+      }
     }
 
     def records_val() {
-      val records = kafkaConsumer.poll(5000)
-      records_print(records)
+      records_print()
       Thread.sleep(5000L)
 
       records_val()

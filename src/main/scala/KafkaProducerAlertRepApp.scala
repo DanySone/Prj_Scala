@@ -22,8 +22,8 @@ object KafkaProducerAlertRepApp extends App {
 
   // Name of the topic that will be used to put messages
   val topic = "alert_report_topic"
-  val partition_report = "report"
-  val partition_alert = "alert"
+  val partition_report = "0"
+  val partition_alert = "1"
   def report_generator(p: KafkaProducer[String, String]) {
     val d1 = DroneReportObj.randrep()
 
