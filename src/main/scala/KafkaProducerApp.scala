@@ -1,8 +1,8 @@
-import java.util.Properties
 import org.apache.kafka.clients.producer.{KafkaProducer, ProducerRecord}
 
-import java.util.TimerTask //used in order to produce a report every minute
-import java.util.Timer
+import java.util.Properties
+import scala.concurrent.duration.{FiniteDuration, SECONDS}
+import List._
 
 object KafkaProducerApp extends App {
 
@@ -21,24 +21,21 @@ object KafkaProducerApp extends App {
   // Name of the topic that will be used to put messages
   val topic = "text_topic"
 
-  // Instantiate drone report object
-  val d1 = DroneReportObj.randrep()
-
-  //Send drone report every minute
-  val executingTask = new ClassExecutingTask
-  executingTask.start()
-
-
   try {
-    val record = new ProducerRecord[String, String](topic,
-      d1._id.toString + ";"
-        + d1._latitude + ";"
-        + d1._longitude + ";"
-        + d1._surrounding.toString + ";"
-        + d1._words.toString + ";"
-        + d1._day)
-    val metadata = producer.send(record)
+    fill(50) {
+      val d1 = DroneReportObj.randrep()
+      val report = new ProducerRecord[String, String](topic,
+        d1._id.toString + ";"
+          + d1._latitude + ";"
+          + d1._longitude + ";"
+          + d1._surrounding.toString + ";"
+          + d1._words.toString + ";"
+          + d1._day)
+      producer.send(report)
+      Thread.sleep(60000L)
     }
+
+  }
   catch {
     case e:Exception => e.printStackTrace()
   } finally {
