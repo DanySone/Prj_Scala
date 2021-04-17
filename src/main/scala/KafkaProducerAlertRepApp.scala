@@ -30,17 +30,17 @@ object KafkaProducerAlertRepApp extends App {
     val alert = d1._surrounding.filter((t) => t._2 < 30)
     val alert_report = new ProducerRecord[String, String](topic ,
       partition_alert ,
-      alert.keys + ","
+      alert.keys + "/"
     + alert.values + ";")
 
     val report = new ProducerRecord[String, String](topic ,
       partition_report ,
-      d1._id.toString + ","
-        + d1._latitude + ","
-        + d1._longitude + ","
-        + d1._surrounding.toString + ","
-        + d1._words.toString + ","
-        + d1._day + ","
+      d1._id.toString + "/"
+        + d1._latitude + "/"
+        + d1._longitude + "/"
+        + d1._surrounding.toString + "/"
+        + d1._words.toString + "/"
+        + d1._day + "/"
         + d1._surrounding.exists((t) => t._2 < 30) + ";")
     if (alert.keys != Set.empty) {
       val metadata_alert = p.send(alert_report)
