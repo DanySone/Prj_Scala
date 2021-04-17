@@ -24,6 +24,11 @@ object KafkaProducerApp extends App {
   try {
     fill(50) {
       val d1 = DroneReportObj.randrep()
+      val alert = d1._surrounding.filter((t) => t._2 < 50)
+      if (alert.size == 1)
+        println("Alert ! the citizen " + alert + "is unhappy, he must go to the peaceland prison.")
+      else (alert.size > 1)
+        println("Alert ! the citizens " + alert + "are unhappy, they must go to the peaceland prison.")
       val report = new ProducerRecord[String, String](topic,
         d1._id.toString + ";"
           + d1._latitude + ";"

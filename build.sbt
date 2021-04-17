@@ -16,11 +16,6 @@ libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.0-alpha1"
 // A library for generating fake data.
 libraryDependencies += "com.github.pjfanning" % "scala-faker_2.13" % "0.5.2"
 
-// https://mvnrepository.com/artifact/com.typesafe.akka/akka-actor
-libraryDependencies += "com.typesafe.akka" %% "akka-actor" % "2.6.14"
-
-// https://mvnrepository.com/artifact/org.scalaz/scalaz-core
-libraryDependencies += "org.scalaz" %% "scalaz-core" % "7.2.30"
 
 
 
