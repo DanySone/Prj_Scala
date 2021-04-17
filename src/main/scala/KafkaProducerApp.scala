@@ -29,12 +29,12 @@ object KafkaProducerApp extends App {
   def report_generator(p: KafkaProducer[String, String]) {
     val d1 = DroneReportObj.randrep()
     val report = new ProducerRecord[String, String](topic,
-      d1._id.toString + ","
-        + d1._latitude + ","
-        + d1._longitude + ","
-        + d1._surrounding.toString + ","
-        + d1._words.toString + ","
-        + d1._day + ","
+      d1._id.toString + "/"
+        + d1._latitude + "/"
+        + d1._longitude + "/"
+        + d1._surrounding.toString + "/"
+        + d1._words.toString + "/"
+        + d1._day + "/"
         + d1._surrounding.exists((t) => t._2 < 30) + ";")
     val metadata = p.send(report)
     Thread.sleep(3000L)

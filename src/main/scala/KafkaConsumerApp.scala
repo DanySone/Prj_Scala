@@ -5,8 +5,9 @@
  import java.util
  import scala.collection.JavaConverters._
  import java.util.Properties
+ import java.io._
 
-  object KafkaConsumerApp extends App {
+ object KafkaConsumerApp extends App {
     val props = new Properties()
     props.put("bootstrap.servers", "localhost:9092")
     props.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer")
@@ -19,6 +20,9 @@
     def records_print(records: ConsumerRecords[String, String]): Unit = {
       val rec = records.asScala.head.value()
       println(rec)
+      val pw = new PrintWriter(new FileOutputStream(new File("rapport.csv"),true))
+      pw.write(rec+"\n")
+      pw.close
     }
 
     def records_val() {
