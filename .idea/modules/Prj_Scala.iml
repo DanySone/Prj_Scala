@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id="prj_scala [file:/home/dany/Documents/GitHub/Prj_Scala/]" external.linked.project.path="$MODULE_DIR$/../.." external.root.project.path="$MODULE_DIR$/../.." external.system.id="SBT" type="JAVA_MODULE" version="4">
+<module external.linked.project.id="prj_scala [file:/home/tartas/IdeaProjects/Prj_Scala/]" external.linked.project.path="$MODULE_DIR$/../.." external.root.project.path="$MODULE_DIR$/../.." external.system.id="SBT" type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
-    <output url="file://$MODULE_DIR$/../../target/scala-2.13/classes" />
-    <output-test url="file://$MODULE_DIR$/../../target/scala-2.13/test-classes" />
+    <output url="file://$MODULE_DIR$/../../target/scala-2.12/classes" />
+    <output-test url="file://$MODULE_DIR$/../../target/scala-2.12/test-classes" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../..">
       <sourceFolder url="file://$MODULE_DIR$/../../src/main/scala" isTestSource="false" />
@@ -10,7 +10,6 @@
       <excludeFolder url="file://$MODULE_DIR$/../../target" />
     </content>
     <orderEntry type="inheritedJdk" />
-    <orderEntry type="library" name="sbt: com.github.pjfanning:scala-faker_2.13:0.5.2:jar" level="project" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="sbt: aopalliance:aopalliance:1.0:jar" level="project" />
     <orderEntry type="library" name="sbt: com.fasterxml.jackson.core:jackson-annotations:2.10.5:jar" level="project" />
@@ -22,9 +21,10 @@
     <orderEntry type="library" name="sbt: com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.9.10:jar" level="project" />
     <orderEntry type="library" name="sbt: com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.9.10:jar" level="project" />
     <orderEntry type="library" name="sbt: com.fasterxml.jackson.module:jackson-module-paranamer:2.10.5:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.fasterxml.jackson.module:jackson-module-scala_2.13:2.10.5:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.fasterxml.jackson.module:jackson-module-scala_2.12:2.10.5:jar" level="project" />
     <orderEntry type="library" name="sbt: com.fasterxml.woodstox:woodstox-core:5.0.3:jar" level="project" />
     <orderEntry type="library" name="sbt: com.github.luben:zstd-jni:1.4.5-6:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.github.pjfanning:scala-faker_2.12:0.5.0:jar" level="project" />
     <orderEntry type="library" name="sbt: com.github.stephenc.jcip:jcip-annotations:1.0-1:jar" level="project" />
     <orderEntry type="library" name="sbt: com.google.code.findbugs:jsr305:3.0.2:jar" level="project" />
     <orderEntry type="library" name="sbt: com.google.code.gson:gson:2.2.4:jar" level="project" />
@@ -47,7 +47,7 @@
     <orderEntry type="library" name="sbt: com.sun.jersey:jersey-servlet:1.19:jar" level="project" />
     <orderEntry type="library" name="sbt: com.sun.xml.bind:jaxb-impl:2.2.3-1:jar" level="project" />
     <orderEntry type="library" name="sbt: com.thoughtworks.paranamer:paranamer:2.8:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.typesafe.scala-logging:scala-logging_2.13:3.9.2:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.typesafe.scala-logging:scala-logging_2.12:3.9.2:jar" level="project" />
     <orderEntry type="library" name="sbt: com.yammer.metrics:metrics-core:2.2.0:jar" level="project" />
     <orderEntry type="library" name="sbt: commons-beanutils:commons-beanutils:1.9.4:jar" level="project" />
     <orderEntry type="library" name="sbt: commons-cli:commons-cli:1.4:jar" level="project" />
@@ -100,7 +100,7 @@
     <orderEntry type="library" name="sbt: org.apache.httpcomponents:httpcore:4.4.13:jar" level="project" />
     <orderEntry type="library" name="sbt: org.apache.kafka:kafka-clients:2.7.0:jar" level="project" />
     <orderEntry type="library" name="sbt: org.apache.kafka:kafka-raft:2.7.0:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.apache.kafka:kafka_2.13:2.7.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.apache.kafka:kafka_2.12:2.7.0:jar" level="project" />
     <orderEntry type="library" name="sbt: org.apache.kerby:kerb-admin:1.0.1:jar" level="project" />
     <orderEntry type="library" name="sbt: org.apache.kerby:kerb-client:1.0.1:jar" level="project" />
     <orderEntry type="library" name="sbt: org.apache.kerby:kerb-common:1.0.1:jar" level="project" />
@@ -134,13 +134,13 @@
     <orderEntry type="library" name="sbt: org.eclipse.jetty:jetty-xml:9.4.20.v20190813:jar" level="project" />
     <orderEntry type="library" name="sbt: org.lz4:lz4-java:1.7.1:jar" level="project" />
     <orderEntry type="library" name="sbt: org.ow2.asm:asm:5.0.4:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.scala-lang.modules:scala-collection-compat_2.13:2.2.0:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.scala-lang.modules:scala-java8-compat_2.13:0.9.1:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.scala-lang:scala-library:2.13.4:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.scala-lang:scala-reflect:2.13.4:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.scala-lang.modules:scala-collection-compat_2.12:2.2.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.scala-lang.modules:scala-java8-compat_2.12:0.9.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.scala-lang:scala-library:2.12.10:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.scala-lang:scala-reflect:2.12.10:jar" level="project" />
     <orderEntry type="library" name="sbt: org.slf4j:slf4j-api:2.0.0-alpha1:jar" level="project" />
     <orderEntry type="library" name="sbt: org.slf4j:slf4j-simple:2.0.0-alpha1:jar" level="project" />
     <orderEntry type="library" name="sbt: org.xerial.snappy:snappy-java:1.1.7.7:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.yaml:snakeyaml:1.27:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.yaml:snakeyaml:1.13:jar" level="project" />
   </component>
 </module>

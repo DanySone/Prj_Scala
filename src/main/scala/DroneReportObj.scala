@@ -23,7 +23,7 @@ object DroneReportObj {
     val n = scala.util.Random.nextInt(20)
     val m = scala.util.Random.nextInt(10)
     val list_day = List("Monday", "Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday")
-    val rday = r.between(0,7)
+    val rday = r.nextInt(7)
     DroneReport(r.nextInt(100000),
       Address.latitude,
       Address.longitude,
@@ -34,7 +34,7 @@ object DroneReportObj {
   }
 
   def dronedisp(d: DroneReport) = {
-    val rep = "id = " + d._id.toString + " latitude = " + d._latitude + " longitude = " + d._longitude + " surrounding = " + d._surrounding.toString + " words = " + d._words.toString
+    val rep = "id = " + d._id.toString + " latitude = " + d._latitude + " longitude = " + d._longitude + " surrounding = " + d._surrounding.toString + " words = " + d._words.toString+" day = "+d._day.toString
     println(rep)
   }
 }
