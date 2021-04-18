@@ -17,5 +17,9 @@ libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.0-alpha1"
 libraryDependencies += "com.github.pjfanning" % "scala-faker_2.13" % "0.5.2"
 
 
+// https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-client
+libraryDependencies += "org.apache.hadoop" % "hadoop-client" % "3.2.2"
+
+
 
 
