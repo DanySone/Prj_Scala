@@ -24,7 +24,7 @@
    def records_print() {
       try {
         val records = kafkaConsumer.poll(5000)
-        val rec = records.asScala.head.value()
+        val rec = records.asScala.head.value() + "\n"
         println(rec)
         val pw = new PrintWriter(new FileOutputStream(new File("alert_"+format.format(Calendar.getInstance().getTime()).toString+".csv"),true))
         pw.write(rec)
