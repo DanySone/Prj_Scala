@@ -19,7 +19,17 @@ libraryDependencies += "com.github.pjfanning" % "scala-faker_2.12" % "0.5.2"
 
 // https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-client
 libraryDependencies += "org.apache.hadoop" % "hadoop-client" % "3.2.2"
+// https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-common
+libraryDependencies += "org.apache.hadoop" % "hadoop-common" % "3.2.2"
+// https://mvnrepository.com/artifact/commons-io/commons-io
+libraryDependencies += "commons-io" % "commons-io" % "2.4"
 
+
+
+// https://mvnrepository.com/artifact/org.apache.spark/spark-core
+libraryDependencies += "org.apache.spark" %% "spark-core" % "3.1.1"
+// https://mvnrepository.com/artifact/org.apache.spark/spark-sql
+libraryDependencies += "org.apache.spark" %% "spark-sql" % "3.1.1"
 
 
 

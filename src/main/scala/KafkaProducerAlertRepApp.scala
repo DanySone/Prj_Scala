@@ -14,9 +14,6 @@ object KafkaProducerAlertRepApp extends App {
     "org.apache.kafka.common.serialization.StringSerializer")
   props.put("acks","all")
 
-
-
-
   //Instantiate producer
   val producer = new KafkaProducer[String, String](props)
 
@@ -30,7 +27,9 @@ object KafkaProducerAlertRepApp extends App {
     val alert = d1._surrounding.filter((t) => t._2 < 30)
     val alert_report = new ProducerRecord[String, String](topic ,
       partition_alert ,
-      alert.keys + "/"
+      d1._latitude + "/"
+    + d1._longitude + "/"
+    + alert.keys + "/"
     + alert.values + ";")
 
     val report = new ProducerRecord[String, String](topic ,
